@@ -2,6 +2,7 @@ package com.how2j.character;
 
 public class Hero implements Comparable<Hero> {
 
+	public int id;
 	private String name;
 	private float hp;
 	private int damage;
@@ -11,8 +12,9 @@ public class Hero implements Comparable<Hero> {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Hero(String name, float hp, int damage) {
+	public Hero(int id, String name, float hp, int damage) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.hp = hp;
 		this.damage = damage;
@@ -53,7 +55,7 @@ public class Hero implements Comparable<Hero> {
 
 	@Override
 	public String toString() {
-		return "Hero [name=" + name + ", hp=" + hp + ", damage=" + damage + "]";
+		return "Hero [id=" + id + ", name=" + name + ", hp=" + hp + ", damage=" + damage + "]";
 	}
 
 }

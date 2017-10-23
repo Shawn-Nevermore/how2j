@@ -12,7 +12,7 @@ public class TestLambda {
 		ArrayList<Hero> heros = new ArrayList<>();
 
 		for (int i = 0; i < 5; i++) {
-			heros.add(new Hero("Hero " + i, r.nextInt(1000), r.nextInt(100)));
+			heros.add(new Hero(i, "Hero " + i, r.nextInt(1000), r.nextInt(100)));
 		}
 
 		System.out.println("初始化后的合集：");
