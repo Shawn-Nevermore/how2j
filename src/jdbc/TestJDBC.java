@@ -27,7 +27,7 @@ public class TestJDBC {
 		System.out.printf("%d\t%-12s%.2f\t%d", getH.id, getH.getName(), getH.getHp(), getH.getDamage());
 */		
 		
-		List<Hero> list = HeroORM.list();
+		List<Hero> list = new HeroDAO().list(0,10);
 		for(Hero h : list ) {
 			System.out.printf("%d\t%-12s%.2f\t%d%n", h.id, h.getName(), h.getHp(), h.getDamage());
 		}
@@ -71,7 +71,6 @@ public class TestJDBC {
 			System.out.println("执行插入语句成功");
 
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
